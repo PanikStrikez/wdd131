@@ -1,0 +1,66 @@
+/* General styles */
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Content box */
+  .content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+    text-size-adjust: 100%;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  
+  /* Titles */
+  .title h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .title h2 {
+    color: #006EB6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(205, 202, 202);
+    padding-bottom: 8px;
+  }
+  
+  /* Paragraphs */
+  main p {
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  
+  /* Ordered list */
+  .does-list {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    word-spacing: 1.5px;
+    line-height: 1.5;
+    text-align: left;
+    
+  }
+
+  .does-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer logo */
+  .logo {
+    width: 150px;
+    margin-top: 20px;
+  }
