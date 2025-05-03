@@ -65,3 +65,16 @@ body {
     width: 150px;
     margin-top: 20px;
   }
+  
+  .dark {
+    background-color: #333;
+    color: white;
+  }
+  
+  .dark .title h2 {
+    color: #86a8c5; /* Adjusted contrast for accessibility */
+  }
+  
+  .dark .logo {
+    content: url("byui-logo_white.webp"); /* Switch to white logo */
+  }
