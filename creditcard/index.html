@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <favicon href="favicon.png" />
+  <title>Credit Card Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://js.stripe.com/v2/"></script>
+  <script src="https://use.fontawesome.com/f1e0bf0cbc.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Success and error message containers -->
+  <div id="card-success" class="hidden">
+    <i class="fa fa-check"></i>
+    <p>Payment Successful!</p>
+  </div>
+  <div id="form-errors" class="hidden">
+    <i class="fa fa-exclamation-triangle"></i>
+    <p id="card-error">Card error</p>
+  </div>
+
+  <div id="form-container">
+    <!-- Front of the card -->
+    <div id="card-front" class="card">
+      <div id="shadow"></div>
+      <div id="image-container">
+        <span id="amount">Paying: <strong>$99</strong></span>
+        <span id="card-image">
+          <i class="fa fa-credit-card"></i>
+        </span>
+      </div>
+
+      <!-- Card Number -->
+      <div class="input-group">
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" placeholder="1234 5678 9101 1112" maxlength="16" />
+      </div>
+
+      <!-- Card Holder and Expiration as a row -->
+      <div class="input-row">
+        <div id="cardholder-container" class="input-group flex-2">
+          <label for="card-holder">Card Holder</label>
+          <input type="text" id="card-holder" placeholder="John Doe" />
+        </div>
+        <div id="exp-container" class="input-group flex-1">
+          <label>Expiration</label>
+          <div class="expiration-inputs">
+            <input id="card-month" type="text" placeholder="MM" maxlength="2" />
+            <input id="card-year" type="text" placeholder="YY" maxlength="2" />
+          </div>
+        </div>
+      </div>
+
+      <!-- CVC/CVV -->
+      <div id="cvc-container" class="input-group">
+        <label for="card-cvc">CVC/CVV</label>
+        <input id="card-cvc" placeholder="XXX" type="text" minlength="3" maxlength="4" />
+      </div>
+    </div>
+    <!-- End card front -->
+
+    <!-- Back of the card -->
+    <div id="card-back" class="card">
+      <div id="card-stripe"></div>
+    </div>
+    <!-- End card back -->
+
+    <!-- Hidden token input and Submit button -->
+    <input type="text" id="card-token" placeholder="token" />
+    <button type="button" id="card-btn">Submit</button>
+  </div>
+  <!-- End form container -->
+</body>
+</html>
