@@ -198,3 +198,10 @@ footer .social {
     margin: 0 auto;
   }
 }
+
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-top: 2em;
+}
